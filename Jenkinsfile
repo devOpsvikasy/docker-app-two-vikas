@@ -8,7 +8,22 @@ pipeline{
             steps{
                 sh 'git clone https://github.com/devOpsvikasy/docker-app-two-vikas.git'
             }
-         }        
+         } 
+        
+        
+        stage("Ansible Scripts"){
+            
+            steps{
+                sh '''
+                
+                ansible --version
+                
+                '''
+            
+            }
+        }
+        
+        /*
         stage('Docker Build & Push'){
               steps {
                     sh '''
@@ -32,7 +47,7 @@ pipeline{
                     
                     
                     
-                    '''              }
-         }
+                    '''   }
+         }*/
     }
 }
