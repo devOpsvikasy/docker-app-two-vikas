@@ -6,7 +6,7 @@ pipeline{
     stages{
        stage('GetCode'){
             steps{
-                git 'https://github.com/devOpsvikasy/docker-app-two-vikas.git'
+                sh 'git clone https://github.com/devOpsvikasy/docker-app-two-vikas.git'
             }
          }        
         stage('Docker Build & Push'){
